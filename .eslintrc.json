@@ -5,5 +5,21 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["next/core-web-vitals", "prettier"]
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "globals": {
+    "React": "writable"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["components", "./src/components"]]
+      }
+    }
+  }
 }
