@@ -2,13 +2,18 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import utilStyles from '@/styles/utils.module.css';
 import styles from './styles.module.scss';
+import utilStyles from '@/styles/utils.module.css';
 
 const name = 'My Name';
 export const siteTitle = 'Next.js Sample Website';
 
-export function Layout({ children, home }) {
+type Props = {
+  children: React.ReactNode;
+  home?: boolean;
+};
+
+export function Layout({ children, home }: Props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,6 +28,7 @@ export function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -58,6 +64,7 @@ export function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
