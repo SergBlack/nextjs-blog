@@ -1,0 +1,30 @@
+@import 'src/styles/colors';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: $blue;
+}
+.description {
+  color: $light;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.75;
+  margin: 0 20px;
+}
+
+.copyright {
+  color: $light;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: $light;
+}

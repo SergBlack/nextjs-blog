@@ -1,5 +1,5 @@
-import { PagePropsType, PostType } from '@/types/posts';
-import '@/styles/global.css';
+import { PagePropsType } from '@/types/posts';
+import '@/styles/global.scss';
 
 type Props = {
   // TODO: типизировать

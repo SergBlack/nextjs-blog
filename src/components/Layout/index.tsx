@@ -2,8 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './styles.module.scss';
+import { Footer } from '@/components/Footer';
 import utilStyles from '@/styles/utils.module.css';
+import styles from './styles.module.scss';
 
 const name = 'My Name';
 export const siteTitle = 'Next.js Sample Website';
@@ -73,6 +74,8 @@ export function Layout({ children, home }: Props) {
           </Link>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }
