@@ -1,8 +1,45 @@
 @import 'src/styles/colors';
 
 .header {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 $shadow;
+}
+
+.container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  box-shadow: 0 4px 8px 0 $shadow;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 880px;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.textWrapper {
+  padding-left: 1rem;
+
+  a {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+.name {
+  color: $blue;
+  text-decoration: none;
 }

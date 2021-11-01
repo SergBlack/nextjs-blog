@@ -1,50 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
-import { MY_NAME, PATHS } from '@/constants/constants';
+import { MY_NAME } from '@/constants/constants';
 import utilStyles from '@/styles/utils.module.css';
 import styles from './styles.module.scss';
 
-export const Header = () => {
-  const { pathname } = useRouter();
-  const isHomePage = pathname === PATHS.ROOT;
+export const Header = () => (
+  <header className={styles.header}>
+    <div className={styles.container}>
+      <Link href="/">
+        <a className={styles.logo}>
+          <Image priority src="/images/avatar.png" className={utilStyles.circle} height={64} width={64} alt={MY_NAME} />
+        </a>
+      </Link>
 
-  return (
-    <header className={styles.header}>
-      {isHomePage ? (
-        <>
-          <Image
-            priority
-            src="/images/vertigo.jpg"
-            className={utilStyles.borderCircle}
-            height={64}
-            width={64}
-            alt={MY_NAME}
-          />
-          <h1 className={utilStyles.heading2Xl}>{MY_NAME}</h1>
-        </>
-      ) : (
-        <>
-          <Link href="/">
-            <a>
-              <Image
-                priority
-                src="/images/vertigo.jpg"
-                className={utilStyles.borderCircle}
-                height={64}
-                width={64}
-                alt={MY_NAME}
-              />
-            </a>
-          </Link>
-          <h2 className={utilStyles.headingLg}>
-            <Link href="/">
-              <a className={utilStyles.colorInherit}>{MY_NAME}</a>
-            </Link>
-          </h2>
-        </>
-      )}
-    </header>
-  );
-};
+      <div className={styles.textWrapper}>
+        <Link href="/">
+          <a className={styles.name}>{MY_NAME}</a>
+        </Link>
+
+        <p>Frontend developer</p>
+      </div>
+    </div>
+  </header>
+);

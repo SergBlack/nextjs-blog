@@ -29,6 +29,10 @@
   border-radius: 8px;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 .colorInherit {
   color: inherit;
 }
