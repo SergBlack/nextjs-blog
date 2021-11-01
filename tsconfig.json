@@ -20,7 +20,8 @@
       "@/pages/*": ["pages/*"],
       "@/posts/*": ["posts/*"],
       "@/styles/*": ["styles/*"],
-      "@/types/*": ["types/*"]
+      "@/types/*": ["types/*"],
+      "@/constants/*": ["constants/*"]
     },
     "incremental": true
   },
