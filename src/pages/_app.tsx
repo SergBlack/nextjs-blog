@@ -2,7 +2,7 @@ import { PagePropsType } from '@/types/posts';
 import '@/styles/global.scss';
 
 type Props = {
-  // TODO: типизировать
+  // TODO типизировать
   Component: any;
   pageProps: PagePropsType;
 };
