@@ -1,13 +1,19 @@
 import styles from './styles.module.scss';
+import { MY_NAME } from '@/constants/constants';
 
 export const Footer = () => (
   <footer className={styles.footer}>
-    <p className={styles.description}>Блог</p>
+    <div className={styles.container}>
+      <div className={styles.description}>
+        <p>Блог frontend разработчика</p>
+      </div>
 
-    <div className={styles.copyright}>
-      {'Copyright © '}
-      <a href="">http://myblog.ru</a>
-      {` ${new Date().getFullYear()}`}
+      <div className={styles.socialLinks}>SocialLinks</div>
+
+      <div className={styles.copyright}>
+        {`© ${new Date().getFullYear()} `}
+        <a href="">{MY_NAME}</a>
+      </div>
     </div>
   </footer>
 );
