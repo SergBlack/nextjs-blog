@@ -23,12 +23,17 @@
   @media screen and (max-width: 768px) {
     flex-direction: column;
     font-size: 0.8rem;
+    justify-content: center;
   }
 }
 
 .description {
   p {
     margin: 0 20px;
+  }
+
+  @media screen and (max-width: 576px) {
+    display: none;
   }
 }
 

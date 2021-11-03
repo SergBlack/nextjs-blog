@@ -1,5 +1,6 @@
 import styles from './styles.module.scss';
 import { MY_NAME } from '@/constants/constants';
+import { SocialButtons } from '@/components/SocialButtons';
 
 export const Footer = () => (
   <footer className={styles.footer}>
@@ -8,7 +9,7 @@ export const Footer = () => (
         <p>Блог frontend разработчика</p>
       </div>
 
-      <div className={styles.socialLinks}>SocialLinks</div>
+      <SocialButtons />
 
       <div className={styles.copyright}>
         {`© ${new Date().getFullYear()} `}
