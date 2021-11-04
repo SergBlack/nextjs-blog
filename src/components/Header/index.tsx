@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Head from 'next/head';
 
-import { siteTitle } from '@/components/Layout';
 import { MY_NAME } from '@/constants/constants';
-import utilStyles from '@/styles/utils.module.css';
+import { Avatar } from '@/components/Avatar';
+import { siteTitle } from '@/components/Layout';
+import AvatarImg from '../../../public/images/avatar.png';
 import styles from './styles.module.scss';
 
 export const Header = () => (
@@ -25,19 +25,7 @@ export const Header = () => (
 
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/">
-          <a className={styles.logo}>
-            <Image
-              priority
-              src="/images/avatar.png"
-              className={utilStyles.circle}
-              height={64}
-              width={64}
-              alt={MY_NAME}
-            />
-          </a>
-        </Link>
-
+        <Avatar src={AvatarImg} alt={MY_NAME} />
         <div className={styles.textWrapper}>
           <Link href="/">
             <a className={styles.name}>{MY_NAME}</a>
