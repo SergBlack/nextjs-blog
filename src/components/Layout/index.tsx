@@ -1,9 +1,7 @@
 import { Header } from '@/components/Header';
+import { Main } from '@/components/Main';
 import { Footer } from '@/components/Footer';
 import styles from './styles.module.scss';
-import { Main } from '@/components/Main';
-
-export const siteTitle = 'Next.js Sample Website';
 
 type Props = {
   children: React.ReactNode;

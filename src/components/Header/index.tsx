@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { MY_NAME } from '@/constants/constants';
 import { Avatar } from '@/components/Avatar';
-import { siteTitle } from '@/components/Layout';
-import AvatarImg from '../../../public/images/avatar.png';
+import { MY_NAME, siteTitle } from '@/constants/constants';
+import MyAvatar from '../../../public/images/avatar.png';
 import styles from './styles.module.scss';
 
 export const Header = () => (
@@ -25,7 +24,8 @@ export const Header = () => (
 
     <header className={styles.header}>
       <div className={styles.container}>
-        <Avatar src={AvatarImg} alt={MY_NAME} />
+        <Avatar src={MyAvatar} alt={MY_NAME} />
+
         <div className={styles.textWrapper}>
           <Link href="/">
             <a className={styles.name}>{MY_NAME}</a>
