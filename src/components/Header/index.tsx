@@ -5,12 +5,14 @@ import { Avatar } from '@/components/Avatar';
 import { MY_NAME, siteTitle } from '@/constants/constants';
 import MyAvatar from '../../../public/images/avatar.png';
 import styles from './styles.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJs, faHtml5, faCss3Alt, faReact } from '@fortawesome/free-brands-svg-icons';
 
 export const Header = () => (
   <>
     <Head>
       <link rel="icon" href="/favicon.ico" />
-      <meta name="description" content="Learn how to build a personal website using Next.js" />
+      <meta name="description" content="Web development blog" />
       <meta
         property="og:image"
         content={`https://og-image.vercel.app/${encodeURI(
@@ -24,14 +26,39 @@ export const Header = () => (
 
     <header className={styles.header}>
       <div className={styles.container}>
-        <Avatar src={MyAvatar} alt={MY_NAME} />
+        <div className={styles.logoWrapper}>
+          <Avatar src={MyAvatar} alt={MY_NAME} />
 
-        <div className={styles.textWrapper}>
-          <Link href="/">
-            <a className={styles.name}>{MY_NAME}</a>
+          <div className={styles.textWrapper}>
+            <Link href="/">
+              <a className={styles.name}>{MY_NAME}</a>
+            </Link>
+
+            <p>Frontend developer</p>
+          </div>
+        </div>
+
+        <div className={styles.techWrapper}>
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+            <a className={styles.js}>
+              <FontAwesomeIcon icon={faJs} size="2x" />
+            </a>
           </Link>
-
-          <p>Frontend developer</p>
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">
+            <a className={styles.css}>
+              <FontAwesomeIcon icon={faCss3Alt} size="2x" />
+            </a>
+          </Link>
+          <Link href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
+            <a className={styles.html}>
+              <FontAwesomeIcon icon={faHtml5} size="2x" />
+            </a>
+          </Link>
+          <Link href="https://reactjs.org/">
+            <a className={styles.react}>
+              <FontAwesomeIcon icon={faReact} size="2x" />
+            </a>
+          </Link>
         </div>
       </div>
     </header>

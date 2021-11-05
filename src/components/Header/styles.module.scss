@@ -9,13 +9,22 @@
 
 .container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.logoWrapper {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0 auto;
-  max-width: 992px;
-  padding: 0 1rem;
+}
+
+.techWrapper {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -42,4 +51,36 @@
 .name {
   color: $blue;
   text-decoration: none;
+}
+
+.js,
+.css,
+.html,
+.react {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.2rem;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.js {
+  color: #ffd600;
+  background-color: #000;
+}
+
+.css {
+  color: #0277bd;
+}
+
+.html {
+  color: #e65100;
+}
+
+.react {
+  color: #61dafb;
 }
