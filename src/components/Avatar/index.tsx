@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import utilStyles from '@/styles/utils.module.css';
+import utilStyles from '@/styles/utils.module.scss';
 import styles from './styles.module.scss';
 
 type Props = {

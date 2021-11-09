@@ -5,7 +5,7 @@ import { PostsList } from '@/components/PostsList';
 import { getSortedPostsData } from '@/lib/posts';
 import { PagePropsType } from '@/types/posts';
 import { siteTitle } from '@/constants/constants';
-import utilStyles from '@/styles/utils.module.css';
+import utilStyles from '@/styles/utils.module.scss';
 
 import styles from './styles.module.scss';
 

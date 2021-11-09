@@ -1,0 +1,25 @@
+@import 'src/styles/colors';
+
+.postCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 150px;
+  transition-duration: 300ms;
+  box-shadow: $card-shadow;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.postCard:hover {
+  cursor: pointer;
+  transition-duration: 300ms;
+  transform: scale(1.01);
+  box-shadow: $card-shadow-hover;
+}
+
+.date {
+  font-size: 1rem;
+  color: $grey;
+}

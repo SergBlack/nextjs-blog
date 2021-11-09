@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout';
 import { Date } from '@/components/Date';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { PostType } from '@/types/posts';
-import utilStyles from '@/styles/utils.module.css';
+import utilStyles from '@/styles/utils.module.scss';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = Array.isArray(params?.id) ? params?.id[0] : params?.id;
