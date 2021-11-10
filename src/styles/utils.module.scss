@@ -54,14 +54,13 @@
 }
 
 .link {
-  a {
-    color: $blue;
-    text-decoration: none;
-  }
+  color: $blue;
+  text-decoration: none;
+  user-select: none;
+}
 
-  a:hover {
-    color: $blue;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.link:hover {
+  color: $blue;
+  text-decoration: none;
+  cursor: pointer;
 }

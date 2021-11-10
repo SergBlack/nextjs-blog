@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJs, faHtml5, faCss3Alt, faReact } from '@fortawesome/free-brands-svg-icons';
 
 import { Avatar } from '@/components/Avatar';
 import { MY_NAME, siteTitle } from '@/constants/constants';
 import MyAvatar from '../../../public/images/avatar.png';
+import utilStyles from '@/styles/utils.module.scss';
 import styles from './styles.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJs, faHtml5, faCss3Alt, faReact } from '@fortawesome/free-brands-svg-icons';
 
 export const Header = () => (
   <>
@@ -35,10 +36,10 @@ export const Header = () => (
 
           <div className={styles.textWrapper}>
             <Link href="/">
-              <a className={styles.name}>{MY_NAME}</a>
+              <a className={`${utilStyles.link} ${styles.name}`}>{MY_NAME}</a>
             </Link>
 
-            <p>Frontend developer</p>
+            <p className={styles.paragraph}>Frontend developer</p>
           </div>
         </div>
 

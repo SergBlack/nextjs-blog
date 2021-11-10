@@ -40,10 +40,12 @@
   align-items: center;
   text-decoration: none;
   border-radius: 50%;
+  user-select: none;
 }
 
 .textWrapper {
   padding-left: 1rem;
+  user-select: none;
 
   a {
     font-size: 1.2rem;

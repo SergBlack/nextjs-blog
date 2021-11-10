@@ -12,11 +12,8 @@ type Props = {
 
 export const PostCard = ({ id, date, title }: Props) => (
   <Link href={`/posts/${id}`}>
-    <div
-      className={`${utilStyles.borderCircle} ${utilStyles.link} ${styles.postCard}`}
-      onClick={() => console.log('click')}
-    >
-      <a className={styles.link}>{title}</a>
+    <div className={`${utilStyles.borderCircle} ${styles.postCard}`} onClick={() => console.log('click')}>
+      <a className={utilStyles.link}>{title}</a>
 
       <div className={styles.date}>
         <Date dateString={date} />
