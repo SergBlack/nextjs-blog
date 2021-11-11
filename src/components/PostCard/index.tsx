@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Date } from '@/components/Date';
 import utilStyles from '@/styles/utils.module.scss';
+import WebDev from '../../../public/images/webdev.png';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -12,12 +14,20 @@ type Props = {
 
 export const PostCard = ({ id, date, title }: Props) => (
   <Link href={`/posts/${id}`}>
-    <div className={`${utilStyles.borderCircle} ${styles.postCard}`} onClick={() => console.log('click')}>
-      <a className={utilStyles.link}>{title}</a>
+    <li className={`${utilStyles.borderCircle} ${styles.postCard}`} onClick={() => console.log('click')}>
+      <a className={styles.link}>
+        <div className={styles.imgWrapper}>
+          <Image priority src={WebDev} className={styles.img} alt="post-theme" />
+        </div>
 
-      <div className={styles.date}>
-        <Date dateString={date} />
-      </div>
-    </div>
+        <div className={styles.textWrapper}>
+          <p>{title}</p>
+
+          <div className={styles.date}>
+            <Date dateString={date} />
+          </div>
+        </div>
+      </a>
+    </li>
   </Link>
 );
