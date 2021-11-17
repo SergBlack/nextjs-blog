@@ -1,3 +1,32 @@
-.backToHome {
-  margin: 3rem 0 0;
+@import 'src/styles/colors';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+  background-color: $blue;
+  color: $light;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition-duration: 500ms;
+}
+
+.button:hover {
+  transition-duration: 500ms;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.button:active {
+  transition-duration: 500ms;
+  background-color: $magenta;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 40%;
 }

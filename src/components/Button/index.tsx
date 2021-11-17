@@ -1,11 +1,22 @@
-import Link from 'next/link';
-
+import utilStyles from '@/styles/utils.module.scss';
 import styles from './styles.module.scss';
 
-export const Button = ({ text }: { text: string }) => (
-  <div className={styles.backToHome}>
-    <Link href="/">
-      <a>{text}</a>
-    </Link>
-  </div>
+type Props = {
+  text: string;
+  width?: number;
+  height?: number;
+  onClick: () => void;
+  disabled?: boolean;
+};
+
+export const Button = ({ text, width = 200, height = 64, onClick, disabled = false }: Props) => (
+  <button
+    className={`${utilStyles.borderCircle} ${styles.button}`}
+    type="button"
+    style={{ width, height }}
+    onClick={onClick}
+    disabled={disabled}
+  >
+    {text}
+  </button>
 );
