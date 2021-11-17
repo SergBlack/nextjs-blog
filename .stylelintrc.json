@@ -3,5 +3,6 @@
   "customSyntax": "postcss-scss",
   "rules": {
     "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$"
-  }
+  },
+  "string-quotes": "double"
 }

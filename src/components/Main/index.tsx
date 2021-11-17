@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import { Button } from '@/components/Button';
 import { PATHS } from '@/constants/constants';
 import { usePath } from '../../hooks/usePath';
 import styles from './styles.module.scss';
@@ -16,13 +15,7 @@ export const Main = ({ children }: Props) => {
       <div className={styles.container}>
         {children}
 
-        {!isHome && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        )}
+        {!isHome && <Button text="← Back to home" />}
       </div>
     </main>
   );
