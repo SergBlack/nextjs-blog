@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-coy.css';
 
 import { Layout } from '@/components/Layout';
 import { Date } from '@/components/Date';
@@ -32,6 +35,13 @@ type Props = {
 };
 
 export default function Post({ postData }: Props) {
+  useEffect(() => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      el.classList.add('language-javascript');
+      Prism.highlightElement(el);
+    });
+  }, []);
+
   return (
     <Layout>
       <Head>
