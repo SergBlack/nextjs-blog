@@ -22,7 +22,11 @@ export const Main = ({ children }: Props) => {
       <div className={styles.container}>
         {children}
 
-        {!isHome && <Button text="На главную" onClick={onClick} />}
+        {!isHome && (
+          <div className={styles.buttonWrapper}>
+            <Button text="На главную" onClick={onClick} />
+          </div>
+        )}
       </div>
     </main>
   );
