@@ -1,5 +1,21 @@
+@import 'src/styles/colors';
+
 .posts {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.contentBlock {
+  pre {
+    background-color: $light;
+    border-radius: 8px;
+    overflow-x: auto;
+    overflow-wrap: normal;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
 }

@@ -2,13 +2,15 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Prism from 'prismjs';
-import 'prismjs/themes/prism-coy.css';
+import 'prismjs/themes/prism.css';
 
 import { Layout } from '@/components/Layout';
 import { Date } from '@/components/Date';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { PostType } from '@/types/posts';
 import utilStyles from '@/styles/utils.module.scss';
+
+import styles from '../styles.module.scss';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = Array.isArray(params?.id) ? params?.id[0] : params?.id;
@@ -55,7 +57,7 @@ export default function Post({ postData }: Props) {
           <Date dateString={postData.date} />
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }} />
+        <div className={styles.contentBlock} dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }} />
       </article>
     </Layout>
   );
