@@ -25,12 +25,14 @@ const startServer = async () => {
     res.status(404).json({ error: 'No such route exists!' });
   });
 
-  app.listen(PORT, () => {
-    Logger.log(`Server running on port: http://localhost:${PORT}`);
-  }).on('error', (err: Error) => {
-    Logger.error(err);
-    process.exit(1);
-  });
+  app
+    .listen(PORT, () => {
+      Logger.log(`Server running on port: http://localhost:${PORT}`);
+    })
+    .on('error', (err: Error) => {
+      Logger.error(err);
+      process.exit(1);
+    });
 };
 ```
 
