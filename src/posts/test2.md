@@ -9,11 +9,28 @@ Next.js has two forms of pre-rendering: **Static Generation** and **Server-side 
 - **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
 
 ```js
-const hello = 'Hello!';
+const startServer = async () => {
+  const app: Application = express();
 
-let users = {
-  1: 'Nik',
-  2: 'Robert',
+  app.use(bodyParser.json());
+  app.use('/users', usersRouter);
+  app.use('/groups', groupsRouter);
+  app.use('/userGroup', userGroupsRouter);
+
+  app.get('/', (req: Request, res: Response) => {
+    res.send('Welcome to the users API!');
+  });
+
+  app.get('*', (req, res) => {
+    res.status(404).json({ error: 'No such route exists!' });
+  });
+
+  app.listen(PORT, () => {
+    Logger.log(`Server running on port: http://localhost:${PORT}`);
+  }).on('error', (err: Error) => {
+    Logger.error(err);
+    process.exit(1);
+  });
 };
 ```
 
