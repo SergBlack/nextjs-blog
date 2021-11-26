@@ -10,14 +10,23 @@ type Props = {
   id: string;
   date: string;
   title: string;
+  cover?: string;
 };
 
-export const PostCard = ({ id, date, title }: Props) => (
+export const PostCard = ({ id, date, title, cover }: Props) => (
   <Link href={`/posts/${id}`}>
     <li className={`${utilStyles.borderCircle} ${styles.postCard}`}>
       <a className={styles.link}>
         <div className={styles.imgWrapper}>
-          <Image priority src={WebDev} className={styles.img} alt="post-theme" />
+          <Image
+            priority
+            src={cover || WebDev}
+            width={260}
+            height={240}
+            layout="responsive"
+            className={styles.img}
+            alt="post-cover"
+          />
         </div>
 
         <div className={styles.textWrapper}>

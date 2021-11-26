@@ -20,6 +20,7 @@ export function getSortedPostsData(): PostType[] {
       id,
       date: data.date,
       title: data.title,
+      cover: data.cover || '',
     };
   });
 
