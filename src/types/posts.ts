@@ -2,6 +2,7 @@ export type PostType = {
   id: string;
   date: string;
   title: string;
+  cover?: string;
   contentHtml?: string;
 };
 
